@@ -15,6 +15,7 @@ const noNotification = document.querySelector(".no-notification");
 const notificationList = document.querySelector(".notification-list");
 const bell = document.querySelector(".bell");
 const notifications = [1, 2, 3, 4];
+// const notifications = [];
 
 // 이벤트 추가
 // sub-menu-modal

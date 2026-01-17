@@ -99,8 +99,12 @@ address, caption, em {
 }
 .corporate-header .top-menu h1 a {
     width: 121px;
-    height: 17px;
-    background: url("https://i.jobkorea.kr/content/images/corporate/main_v2/logo_jobkorea.png");
+    height: 65px;
+    background-color: #fff;
+    mask-image: url("/static/images/logo.png");
+    mask-size: 100% 100%;
+    /* background-repeat: no-repeat; */
+    /* background-position: 50%; */
 }
 .corporate-header .top-menu-list {
     float: right;
@@ -302,10 +306,10 @@ address, caption, em {
     height: 34px;
     margin: 0 auto;
     padding-top: 9px;
-    border: 1px solid #39f;
+    border: 1px solid #7BA882;
     border-radius: 17px;
     font-weight: 700;
-    color: #39f !important;
+    color: #7BA882 !important;
     text-decoration: none;
     font-size: 13px;
 }
@@ -393,7 +397,7 @@ address, caption, em {
     display: none;
     position: absolute;
     left: 0;
-    top: 136px;
+    top: 185px;
     width: 100%;
     background: #fff;
     padding-top: 30px;
