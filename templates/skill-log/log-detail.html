@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>log-detail</title>
+    <link rel="stylesheet" href="../../static/css/community/header.css" />
+    <link rel="stylesheet" href="../../static/css/community/footer.css" />
+    <link rel="stylesheet" href="../../static/css/skill-log/log-detail.css">
+</head>
+<body>
+    <div id="headerWrap" class="gnbTheme1200 devGnbContainer">
+        <div id="header" class="season_bg">
+            <!--신입공채 메뉴일경우 클래스 start-sub 추가 -->
+            <!-- // headInner -->
+            <div class="headInner">
+                <h1 class="jkLogo">
+                    <a href="">
+                        <img
+                            height="78"
+                            src="/static/images/logo.png"
+                            alt="TRY-CATCH"
+                        />
+                    </a>
+                </h1>
+
+                <!-- // search -->
+                <div class="search" id="searchWrap">
+                    <h2 class="skip">검색</h2>
+                    <form
+                        name="global_seek"
+                        id="AKCFrm"
+                        autocomplete="off"
+                        action="/Search/"
+                        target="_self"
+                    >
+                        <fieldset>
+                            <legend>Smart Match 통합검색</legend>
+                            <div class="smKey">
+                                <input
+                                    type="text"
+                                    id="stext"
+                                    title="검색어 입력"
+                                    name="stext"
+                                    placeholder=""
+                                    maxlength="30"
+                                    data-vvipkeyword=""
+                                    data-vvipkwrdno="0"
+                                />
+                                <!-- // 기존 자동완성 들어갈 영역 -->
+                                <div id="AKCDiv" class="autoSearch">
+                                    <!-- // 기능 끈 상황 -->
+                                    <div
+                                        id="SearchStop"
+                                        class="autoSearchStop"
+                                    >
+                                        <p class="btnArrow" id="btnArrow_C">
+                                            <button
+                                                type="button"
+                                                title="열림"
+                                                class="devAcDisabledInfoOpen"
+                                            >
+                                                <span class="blind"
+                                                    >열림</span
+                                                >
+                                            </button>
+                                        </p>
+                                        <div
+                                            class="searchStopDesc"
+                                            id="StopDesc"
+                                        >
+                                            <p class="description">
+                                                키워드를 입력하시면<br />
+                                                검색어를 추천해드립니다.
+                                            </p>
+                                            <p class="btnOdd">
+                                                <button
+                                                    type="button"
+                                                    id="devAcOn"
+                                                >
+                                                    자동완성 켜기
+                                                </button>
+                                                <span>|</span>
+                                                <button
+                                                    type="button"
+                                                    id="devAcInfoClose"
+                                                    class="odd"
+                                                >
+                                                    닫기
+                                                </button>
+                                            </p>
+                                        </div>
+                                        <p
+                                            class="btnArrow btnArrowClose"
+                                            id="btnArrow_O"
+                                        >
+                                            <button
+                                                type="button"
+                                                title="닫힘"
+                                                class="devAcDisabledInfoClose"
+                                            >
+                                                <span class="blind"
+                                                    >닫힘</span
+                                                >
+                                            </button>
+                                        </p>
+                                        <div class="bg"></div>
+                                    </div>
+
+                                    <!-- // 기능 켠 상황 -->
+                                    <div
+                                        id="SearchStart"
+                                        class="autoSearchStart"
+                                    >
+                                        <div
+                                            class="iframeHolder"
+                                            data-url=""
+                                            data-id="AKCIfrm"
+                                            data-name="AKCIfrm"
+                                            data-title="자동검색"
+                                            data-allowtransparency="true"
+                                        >
+                                            <div
+                                                class="searchWrap"
+                                                id="devSearchWrap"
+                                            >
+                                                <div class="searchList">
+                                                    <h3>검색어 자동완성</h3>
+                                                    <ul id="AKCIDiv"></ul>
+
+                                                    <p class="btnOdd">
+                                                        <button
+                                                            type="button"
+                                                            id="devAcOff"
+                                                            class="odd"
+                                                        >
+                                                            자동완성 끄기
+                                                        </button>
+                                                        <span>|</span>
+                                                        <button
+                                                            type="button"
+                                                            id="devAcInfoClose2"
+                                                            class="odd"
+                                                        >
+                                                            닫기
+                                                        </button>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bg"></div>
+                                    </div>
+                                </div>
+                                <!-- 기존 자동완성 들어갈 영역 // -->
+                                <input
+                                    type="submit"
+                                    value="검색"
+                                    class="submit spGnb"
+                                    id="common_search_btn"
+                                />
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <!-- search // -->
+
+                <!-- // 배너 영역 -->
+                <div class="headBann">
+                    <strong class="skip">TRY-CATCH 주요 서비스</strong>
+                </div>
+            </div>
+            <!-- headInner // -->
+
+            <div id="headNavBar" class="headNavBar dev-headNavBar">
+                <div class="navInner dev-navInner">
+                    <div class="jkNavArea dev-jkNavArea">
+                        <h2 class="skip">주요서비스</h2>
+                        <ul class="serviceNav dev-serviceNav">
+                            <li id="gnbGi" class="navItem">
+                                <a href="" class="linkItem"
+                                    ><span class="spNav"
+                                        ><span class="txIr"
+                                            >서비스 소개</span
+                                        ></span
+                                    ></a
+                                >
+                            </li>
+                            <li class="navItem onepick" id="onepick">
+                                <a href="" class="linkItem"
+                                    ><span class="spNav">체험 정보</span></a
+                                >
+                            </li>
+                            <li id="gnbStart" class="navItem start">
+                                <a href="" class="linkItem"
+                                    ><span class="spNav"
+                                        ><span class="txIr"
+                                            >기업 정보</span
+                                        ></span
+                                    ></a
+                                >
+                            </li>
+                            <li
+                                id="gnbInternship"
+                                class="navItem internship"
+                            >
+                                <a href="/templates/skill-log/dashboard.html" class="linkItem"
+                                    ><span class="spNav"
+                                        >기술 블로그</span
+                                    ></a
+                                >
+                            </li>
+
+                            <li id="futurelab" class="navItem futurelab">
+                                <a href="/templates/community/QnA.html" class="linkItem">
+                                    <span class="spNav"
+                                        ><span class="txIr"
+                                            >커뮤니티</span
+                                        ></span
+                                    >
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- my 홈일경우 클래스 myPage -->
+                        <ul id="devMyPage" class="userNav">
+                            <ul class="userNav">
+                                <li class="userNav-item login">
+                                    <a
+                                        href=""
+                                        class="txt-button login-button"
+                                        >로그인</a
+                                    >
+                                </li>
+                                <li class="userNav-item join">
+                                    <a
+                                        href=""
+                                        class="txt-button join-button"
+                                        >회원가입</a
+                                    >
+                                </li>
+                                <li class="userNav-item star">
+                                    <a
+                                        href=""
+                                        class="txt-button star-button"
+                                        >별 포인트</a
+                                    >
+                                </li>
+                                <li class="userNav-item corp">
+                                    <a href="" target="_blank"
+                                        ><span class="spGnb"
+                                            >기업서비스</span
+                                        ></a
+                                    >
+                                    <div class="lyMyArea">
+                                        <div class="myInner">
+                                            <div class="lyRow">
+                                                <div class="btnRowWrap">
+                                                    <a href=""
+                                                        >기업회원 로그인</a
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div class="myLists">
+                                                <ul>
+                                                    <li>
+                                                        <a href=""
+                                                            ><span
+                                                                class="tx"
+                                                                >기업회원
+                                                                홈</span
+                                                            ></a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href=""
+                                                            ><span
+                                                                class="tx"
+                                                                >공고등록</span
+                                                            ></a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href=""
+                                                            ><span
+                                                                class="tx"
+                                                                >공고·지원자
+                                                                관리</span
+                                                            ></a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href=""
+                                                            ><span
+                                                                class="tx"
+                                                                >기업회원
+                                                                서비스
+                                                                안내</span
+                                                            ></a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <span class="icnArr spGnb"></span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lyNavArea">
+                    <h3 class="skip">채용정보 세부메뉴</h3>
+                    <div class="lyNavWrap">
+                        <div class="lyNavInner side">
+                            <div class="lyRow row01">
+                                <div class="lyRow-inner">
+                                    <div class="col-title">
+                                        나에게 딱 맞는 공고
+                                        <i class="watch"></i>
+                                    </div>
+                                    <div class="lyCol subCol">
+                                        <div class="colItem">
+                                            <strong class="titArea">
+                                                <a href="" class="tit gnbGi"
+                                                    >채험 탐색</a
+                                                >
+                                            </strong>
+                                            <div class="listBx">
+                                                <ul class="list-col">
+                                                    <li>
+                                                        <a href=""
+                                                            >지역별 공고</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href=""
+                                                            >직무별 공고</a
+                                                        >
+                                                    </li>
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="colItem">
+                                            
+                                            <div class="listBx">
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="colItem">
+                                            <strong class="titArea">
+                                                <a
+                                                    href=""
+                                                    class="tit headhunting"
+                                                    >서비스 소개</a
+                                                >
+                                            </strong>
+                                            <div class="listBx">
+                                                <ul class="list-col">
+                                                    <li>
+                                                        <a href=""
+                                                            >서비스 소개</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lyCol subCol">
+                                        <div class="colItem">
+                                            <strong class="titArea">
+                                                <a
+                                                    href=""
+                                                    class="tit onepick"
+                                                    >체험 정보</a
+                                                >
+                                            </strong>
+                                            <div class="listBx">
+                                                <ul class="list-col">
+                                                    <li>
+                                                        <a href=""
+                                                            >체험 공고</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="colItem">
+                                            
+                                            <div class="listBx">
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="colItem">
+                                            
+                                            <div class="listBx">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lyRow-inner">
+                                    <div class="col-title">
+                                        콘텐츠 탐색 <i class="quest"></i>
+                                    </div>
+                                    <div class="lyCol subCol">
+                                        <div class="colItem">
+                                            <strong class="titArea"
+                                                ><a
+                                                    href=""
+                                                    class="tit gnbSalary"
+                                                    >기업 정보</a
+                                                ></strong
+                                            >
+                                            <div class="listBx">
+                                                <ul class="list-col">
+                                                    <li>
+                                                        <a href=""
+                                                            >기업리뷰</a
+                                                        >
+                                                    </li>
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="lyCol subCol">
+                                        <div class="colItem">
+                                            <strong class="titArea corp"
+                                                ><a
+                                                    href=""
+                                                    class="tit career"
+                                                    >기술 블로그</a
+                                                ></strong
+                                            >
+                                            <div class="listBx">
+                                                <ul class="list-col">
+                                                    
+                                                    <li>
+                                                        <a href=""
+                                                            >기술 블로그</a
+                                                        >
+                                                    </li>
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="colItem">
+                                            
+                                            <div class="listBx">
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="colItem">
+                                            
+                                            <div class="listBx">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lyCol subCol">
+                                        <div class="colItem">
+                                            <strong class="titArea"
+                                                ><a href="" class="tit talk"
+                                                    >커뮤니티</a
+                                                ></strong
+                                            >
+                                            <div class="listBx">
+                                                <ul>
+                                                    <li>
+                                                        <a href=""
+                                                            >QnA</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lyCol bottom-menus">
+                                    <!-- CASE : 비로그인 -->
+                                    <ul>
+                                        <li>
+                                            <a href=""
+                                                >자주하는 질문 FAQ<i
+                                                    class="faq"
+                                                ></i
+                                            ></a>
+                                        </li>
+                                        <li>
+                                            <a href=""
+                                                >주요 소식은 공지사항<i
+                                                    class="emoji32_loudspeaker"
+                                                ></i
+                                            ></a>
+                                        </li>
+                                        <li>
+                                            <a href=""
+                                                >도움이 필요할 땐 고객센터<i
+                                                    class="emoji32_headset"
+                                                ></i
+                                            ></a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="sideCol side5h">
+                                <!-- CASE: 비로그인 || 기업회원, 개인회원 로그인 시 삭제 -->
+                                <div class="sideList bb">
+                                    <p class="col-title">
+                                        TRY-CATCH 회원이 아니라면?
+                                        <i class="notMember"></i>
+                                    </p>
+                                    <p>
+                                        <span class="desc"
+                                            >프로필 등록하고</span
+                                        >
+                                        <a
+                                            class="tit devNeedLogin"
+                                            data-url="https://www.jobkorea.co.kr/User/MyPage"
+                                            >체험 신청하기<i
+                                                class="line_line_arrow_right"
+                                            ></i
+                                        ></a>
+                                    </p>
+                                </div>
+                                <div class="colItem">
+                                    <strong class="titArea">
+                                        <a
+                                            data-url="https://www.jobkorea.co.kr/User/MyPage"
+                                            class="tit devNeedLogin"
+                                            >개인회원 홈</a
+                                        >
+                                    </strong>
+                                    <div class="listBx">
+                                        <ul>
+                                            <li>
+                                                <a
+                                                    data-url="https://www.jobkorea.co.kr/User/ResumeMng"
+                                                    class="devNeedLogin"
+                                                    >자기소개서 관리</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    data-url="https://www.jobkorea.co.kr/User/ApplyMng"
+                                                    class="devNeedLogin"
+                                                    >공고지원 현황</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    data-url="https://www.jobkorea.co.kr/User/Scrap"
+                                                    class="devNeedLogin"
+                                                    >스크랩 공고</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    data-url="https://www.jobkorea.co.kr/Text_User/User_Pwd.asp"
+                                                    class="devNeedLogin"
+                                                    >개인정보 수정</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- 배너영역 -->
+                                <!-- CASE: 비로그인 / 개인회원-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="jkNavDimm"></div>
+
+    <div id="wrap">
+        <!-- 사이드 네비게이션 -->
+        <div class="side-navigation">
+            <h2 class="skip">취업톡톡 세부메뉴</h2>
+            <div class="navi-top-area has-tooltip">
+                <a href="#" class="select-tooltip btn-question qnaSpB">블로그 글쓰기</a>
+                <!-- [Dev] 툴팁오픈 : tooltip-open 클래스 추가 -->
+                <div class="create-menu">
+                    <ul class="create-menu-wrap tooltip-layer qnaSpB">
+                        <li>
+                            <a
+                                href=""
+                                class="create-menu-item qna qnaSpB devLoginLayer"
+                                devalert="1"
+                                data-wtypecode="1"
+                            >직무/기업/동문에게 질문하기</a>
+                        </li>
+                        <li>
+                            <a
+                                href=""
+                                class="create-menu-item carrier qnaSpB devLoginLayer"
+                                devalert="1"
+                                data-wtypecode="2"
+                            >커리어 관련 자유롭게 글쓰기</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="myInfoSec logout">
+                    <a href="" class="myInfo devLoginLayer" devalert="0">
+                        <span class="proThumb">
+                            <img
+                                src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/profile_thumb/random_default.jpg"
+                                alt="프로필 이미지"
+                            />
+                        </span>
+                        <p class="msg">
+                            <em>로그인</em> 후 구독과 활동을
+                            <br />시작해보세요
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="navi-list-area">
+                <!-- [Dev] 메뉴 on : 클래스 active 추가 -->
+                <div class="sideNavLow">
+                    <strong class="sideNavTit"
+                        ><a href="">블로그 메뉴</a></strong
+                    >
+                    <ul class="sideNavList">
+                        <li class="sideNavListItem">
+                            <a href="../../templates/skill-log/dashboard.html">블로그 홈</a>
+                        </li>
+                        <li class="sideNavListItem" >
+                            <a href="">블로그 작성</a>
+                        </li>
+                        <li class="sideNavListItem">
+                            <a href="">직무별 검색</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sideNavLow">
+                    <strong class="sideNavTit">실전공략</strong>
+                    <ul class="sideNavList">
+                        <li class="sideNavListItem">
+                            <a href="">자소서 꿀팁</a>
+                        </li>
+                        <li class="sideNavListItem">
+                            <a href="">회사 들여보기</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>  
+        </div>
+        <!-- 사이드 네비게이션 끝 -->
+
+        <!-- 메인 컨테이너 -->
+        <div id="container">
+            <!-- 뷰 : qnaViewWrap -->
+            <div id="content" class="qnaViewWrap">
+                <div class="top-title-wrap">
+                    <h2 class="title">
+                        <span class="skip">질문 상세 보기</span>
+                    </h2>
+                </div>
+                <div class="lyViewBoard">
+                    <div class="viewContWrap">
+                        <div class="contBox">
+                            <p class="tit"> 
+                                햄버거 맛은 기본, 성장에도 진심인 맥도날드
+                            </p>
+                            <div class="post-state">
+                                <div class="post-cell-box">
+                                    <span class="cell">
+                                        <i class="qnaSpB icon-view-eye">조회수</i>
+                                        5
+                                    </span>
+                                    <span class="cell">25분 전 작성</span>
+                                </div>
+                                <div class="post-util">
+                                    <div class="post-util-item">
+                                        <button
+                                            type="button"
+                                            class="icon-more-button qnaSpB devQstnDetailMenuIcon"
+                                        >
+                                            더보기
+                                        </button>
+                                        <!-- [Dev] 더보기 레이어 show - class active 추가 -->
+                                        <div class="view-more-layer">
+                                            <ul>
+                                                <li>
+                                                    <a
+                                                        href=""
+                                                        class="view-more-item devBtnReport"
+                                                        data-idf-no="152584"
+                                                        data-type="1"
+                                                    >신고</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cont">
+                                <p>잡코리아가 듣고 온 맥도날드 매니저 인터뷰🍔</p>
+                            </div>
+
+                            <div class="btmArea">
+                                <div class="hash-tag-wrap">
+                                    <a href="" class="hash-tag-item" target="_blank">#AI</a>
+                                    <a href="" class="hash-tag-item" target="_blank">#연봉</a>
+                                    <a href="" class="hash-tag-item" target="_blank">#인터뷰</a>
+                                </div>
+                                <div class="infoBx">
+                                    <a href="" class="my-profile">
+                                        <!-- [Dev] 프로필 랜덤 이미지 파일명 : random_1 ~ random_20, 이미지 없음 : random_default -->
+                                        <span class="proThumb">
+                                            <img
+                                                onerror="this.src='https://cdn-assets.jobkorea.co.kr/images/jk-pc/m/ver_2/user/qna/profile_thumb/random_default.jpg'"
+                                                src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/m/ver_2/user/qna/profile_thumb/random_2.jpg"
+                                                alt="프로필 이미지"
+                                            />
+                                        </span>
+                                        <span class="info">mentor0632261</span>
+                                    </a>
+                                </div>
+                                <div class="reaction-wrap">
+                                    <div class="reaction-item">
+                                        <button
+                                            type="button"
+                                            class="icon-like qnaSpB devQstnLike"
+                                            data-qstn-no="152584"
+                                        >
+                                            좋아요<em>0</em>
+                                        </button>
+                                    </div>
+                                    <div class="reaction-item has-toolip">
+                                        <button
+                                            type="button"
+                                            class="btnBookmark qnaSpB devQnaDetailBookmark"
+                                            data-qstn-no="152584"
+                                        >
+                                            북마크
+                                        </button>
+                                        <div class="book-mark-layer tooltip-layer qnaSpA">
+                                            <p class="txt">
+                                                내 프로필 &gt; 북마크 에
+                                                추가되었습니다
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="reaction-item">
+                                        <button
+                                            type="button"
+                                            class="icon-share qnaSpB devShareBtn"
+                                        >
+                                            공유하기
+                                        </button>
+                                        <div class="share-layer tooltip-layer qnaSpA">
+                                            <a
+                                                href=""
+                                                class="button button-facebook"
+                                                data-url="https://www.jobkorea.co.kr/net/User/Qstn/AnswerWrite?QstnNo=152584"
+                                            >페이스북</a>
+                                            <a
+                                                href=""
+                                                class="button button-bookmark"
+                                                id="devBookMark"
+                                            >즐겨찾기</a>
+                                            <a
+                                                href=""
+                                                class="button button-copy-url button-popup-component"
+                                            >URL복사</a>
+                                        </div>
+                                        <div class="url-copy-layer">
+                                            <div class="layer-body">
+                                                <div class="description">
+                                                    현재 브라우저의 보안
+                                                    설정에 따라 복사가
+                                                    허용되지 않습니다.<br />아래
+                                                    URL 주소를 드래그 후
+                                                    Ctrl+C를 눌러 복사하시기
+                                                    바랍니다.
+                                                </div>
+                                                <div class="input">
+                                                    <label for="lbl_url_copy" class="screen-out">주소복사</label>
+                                                    <input
+                                                        readonly="readonly"
+                                                        type="text"
+                                                        name=""
+                                                        id="lbl_url_copy"
+                                                        value="https://www.jobkorea.co.kr/net/User/Qstn/AnswerWrite?QstnNo=152584"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <a href="" class="button button-close">닫기</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- contBox 끝 -->
+
+                        <div class="inputBox">
+                            <div class="writeBoxWrap cmtWrite case" style="margin-bottom: 10px">
+                                <form action="#">
+                                    <fieldset>
+                                        <legend>후배에게 답변하기 입력</legend>
+                                        <div class="uiPlaceholder">
+                                            <span class="ph">솔직하고 따뜻한 답변을 남겨주세요.</span>
+                                            <textarea
+                                                class="devTxtAreaAnswerWrite"
+                                                name="Cntnt"
+                                                maxlength="1000"
+                                                title="답변쓰기"
+                                            ></textarea>
+                                        </div>
+                                        <div class="btnWrap">
+                                            <div class="infoBx">
+                                                <a href="javascript:;" class="my-profile">
+                                                    <span class="proThumb"></span>
+                                                    <span class="info">닉네임</span>
+                                                </a>
+                                            </div>
+                                            <span class="byte"><b id="count">0</b> / 1,000</span>
+                                            <button type="button" id="btnSubmit" class="btnSbm">등록</button>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="viewListWrap">
+                        <div class="headerWrap">
+                            <div class="numBx">
+                                <span>댓글 <span class="num">2</span></span>
+                            </div>
+                        </div>
+
+                        <div class="listWrap commonSecWrap">
+                            <ul class="answerArea">
+                                <li>
+                                    <!-- [Dev] 내 답변일 경우 contSec에 클래스 myCmt 추가, cellBx 버튼: 수정/삭제만 노출 -->
+                                    <div class="contSec devContSection " style="display: block;">
+                                        <div class="infoBx">
+                                            <a href="/User/Qstn/MainProfile?Target=11813294" class="my-profile" target="_blank">
+                                                <span class="proThumb"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/m/ver_2/user/qna/profile_thumb/random_1.jpg" alt="프로필 이미지"></span>
+                                                <span class="nickname">mentor5066443</span>
+                                            </a>
+                                            <span class="info"></span>
+                                            <span class="lvIcon">Lv 1</span>
+                                        </div>
+                                            <p class="cont">감사합니다!!</p>
+                                        <div class="cellBx">
+                                            <span class="cell devAnswerDate">2025-09-30 작성</span>
+                                            <span class="cell"><button type="button" class="btnReport devBtnReport" data-idf-no="490273" data-type="2">신고</button></span>
+                                        </div>
+                                        <div class="btnBx devComtRoot" data-answerno="490273">
+                                            <!-- 댓글, 좋아요 버튼 클릭시 클래스 active 추가 -->
+                                            <button type="button" class="btnCmt devBtnComtList">댓글 <em>0</em></button>
+                                            <button type="button" class="btnHeart qnaSpB devBtnAnswerLike ">0</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- [Dev] 내 답글 수정 영역 -->
+                                    <div class="contSec modify-answer" style="display: none;">
+                                        <div class="writeBoxWrap cmtWrite">
+                                            <form action="#" oncopy="return false" oncut="return false" onpaste="return false">
+                                                <fieldset>
+                                                    <legend>후배에게 답변하기 입력</legend>
+                                                    <div class="uiPlaceholder">
+                                                        <span class="ph ph_1">솔직하고 따뜻한 답변을 남겨주세요.</span>
+                                                        <span class="ph ph_2">솔직하고 따뜻한 답변을 남겨주세요.<br>*휴대폰번호, 메일주소, 카카오톡 ID 등 개인정보가 포함된 내용은 비노출 처리 될 수 있습니다.</span>
+                                                        <textarea name="Cntnt" maxlength="1000" title="답변쓰기"></textarea>
+                                                    </div>
+                                                    <div class="btnWrap">
+                                                        <div class="answer-util-wrap">
+                                                            <div class="answer-util-item">
+                                                                <button type="button" class="icon-emoticon qnaSpB">이모티콘</button>
+                                                            </div>
+                                                            <div class="answer-util-item">
+                                                                <button type="button" class="button icon-photo qnaSpB">사진</button>
+                                                            </div>
+                                                        </div>
+                                                        <span class="byte"><b id="count">0</b> / 1,000</span>
+                                                        <button type="button" id="btnSubmit" class="btnSbm devAnswerEditSubmitButton" data-answerno="490273">등록</button>
+                                                        <div class="layer-box-wrap emotion-layer">
+                                                            <p class="layer-header">이모티콘</p>
+                                                            <ul class="emotion-area">
+                                                                <!-- [dev] 이모티콘 총 36개 -->
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_1.png" data-idx="1" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_2.png" data-idx="2" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_3.png" data-idx="3" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_4.png" data-idx="4" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_5.png" data-idx="5" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_6.png" data-idx="6" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_7.png" data-idx="7" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_8.png" data-idx="8" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_9.png" data-idx="9" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_10.png" data-idx="10" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_11.png" data-idx="11" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_12.png" data-idx="12" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_13.png" data-idx="13" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_14.png" data-idx="14" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_15.png" data-idx="15" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_16.png" data-idx="16" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_17.png" data-idx="17" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_18.png" data-idx="18" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_19.png" data-idx="19" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_20.png" data-idx="20" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_21.png" data-idx="21" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_22.png" data-idx="22" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_23.png" data-idx="23" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_24.png" data-idx="24" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_25.png" data-idx="25" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_26.png" data-idx="26" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_27.png" data-idx="27" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_28.png" data-idx="28" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_29.png" data-idx="29" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_30.png" data-idx="30" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_31.png" data-idx="31" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_32.png" data-idx="32" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_33.png" data-idx="33" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_34.png" data-idx="34" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_35.png" data-idx="35" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_36.png" data-idx="36" alt=""></button></li>
+                                                            </ul>
+                                                            <button type="button" class="btn-layer-close qnaSpB"><span class="blind">닫기</span></button>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                            <button type="button" class="btnModifyCancel qnaSpB"><span class="blind">수정 취소</span></button>
+                                        </div>
+                                    </div>
+                                    <!-- // 내 답글 수정 영역 -->
+
+                                    <div class="commentSec" style="display: none;">
+                                        <div class="cmtArea">
+                                            <ul class="cmtList replyWrap">
+                                                <!-- [Dev] 내 댓글일 경우 contSec에 클래스 myCmt 추가, cellBx 버튼: 삭제만 노출 -->
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btnCmtClose qnaSpA qnaBtnClose">댓글접기</button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <!-- [Dev] 내 답변일 경우 contSec에 클래스 myCmt 추가, cellBx 버튼: 수정/삭제만 노출 -->
+                                    <div class="contSec devContSection " style="display: block;">
+                                        <div class="infoBx">
+                                            <a href="/User/Qstn/MainProfile?Target=25197149" class="my-profile" target="_blank">
+                                                <span class="proThumb"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/m/ver_2/user/qna/profile_thumb/random_16.jpg" alt="프로필 이미지"></span>
+                                                <span class="nickname">991208</span>
+                                            </a>
+                                            <span class="info"></span>
+                                            <span class="lvIcon">Lv 2</span>
+                                        </div>
+                                        <p class="cont">감사해요</p>
+                                        <div class="attach-wrap">
+                                            <div class="attach-emoticon">
+                                                <img src="//i.jobkorea.kr/content/images/user/qna/emoticon/emoticon_2.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="cellBx">
+                                            <span class="cell devAnswerDate">2025-05-05 작성</span>
+                                            <span class="cell"><button type="button" class="btnReport devBtnReport" data-idf-no="477653" data-type="2">신고</button></span>  
+                                        </div>
+                                        <div class="btnBx devComtRoot" data-answerno="477653">
+                                            <!-- 댓글, 좋아요 버튼 클릭시 클래스 active 추가 -->
+                                            <button type="button" class="btnCmt devBtnComtList">댓글 <em>0</em></button>
+                                            <button type="button" class="btnHeart qnaSpB devBtnAnswerLike ">0</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- [Dev] 내 답글 수정 영역 -->
+                                    <div class="contSec modify-answer" style="display: none;">
+                                        <div class="writeBoxWrap cmtWrite">
+                                            <form action="#" oncopy="return false" oncut="return false" onpaste="return false">
+                                                <fieldset>
+                                                    <legend>후배에게 답변하기 입력</legend>
+                                                    <div class="uiPlaceholder">
+                                                        <span class="ph ph_1">솔직하고 따뜻한 답변을 남겨주세요.</span>
+                                                        <span class="ph ph_2">솔직하고 따뜻한 답변을 남겨주세요.<br>*휴대폰번호, 메일주소, 카카오톡 ID 등 개인정보가 포함된 내용은 비노출 처리 될 수 있습니다.</span>
+                                                        <textarea name="Cntnt" maxlength="1000" title="답변쓰기"></textarea>
+                                                        <div class="attach-wrap">
+                                                            <div class="attach-emoticon">
+                                                                <img src="//i.jobkorea.kr/content/images/user/qna/emoticon/emoticon_2.png" alt="">
+                                                                <button type="button" class="remove-button qnaSpB">삭제하기</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="btnWrap">
+                                                        <div class="answer-util-wrap">
+                                                            <div class="answer-util-item">
+                                                                <button type="button" class="icon-emoticon qnaSpB">이모티콘</button>
+                                                            </div>
+                                                            <div class="answer-util-item">
+                                                                <button type="button" class="button icon-photo qnaSpB">사진</button>
+                                                            </div>
+                                                        </div>
+                                                        <span class="byte"><b id="count">0</b> / 1,000</span>
+                                                        <button type="button" id="btnSubmit" class="btnSbm devAnswerEditSubmitButton" data-answerno="477653">등록</button>
+                                                        <div class="layer-box-wrap emotion-layer">
+                                                            <p class="layer-header">이모티콘</p>
+                                                            <ul class="emotion-area">
+                                                                <!-- [dev] 이모티콘 총 36개 -->
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_1.png" data-idx="1" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_2.png" data-idx="2" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_3.png" data-idx="3" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_4.png" data-idx="4" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_5.png" data-idx="5" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_6.png" data-idx="6" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_7.png" data-idx="7" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_8.png" data-idx="8" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_9.png" data-idx="9" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_10.png" data-idx="10" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_11.png" data-idx="11" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_12.png" data-idx="12" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_13.png" data-idx="13" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_14.png" data-idx="14" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_15.png" data-idx="15" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_16.png" data-idx="16" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_17.png" data-idx="17" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_18.png" data-idx="18" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_19.png" data-idx="19" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_20.png" data-idx="20" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_21.png" data-idx="21" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_22.png" data-idx="22" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_23.png" data-idx="23" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_24.png" data-idx="24" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_25.png" data-idx="25" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_26.png" data-idx="26" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_27.png" data-idx="27" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_28.png" data-idx="28" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_29.png" data-idx="29" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_30.png" data-idx="30" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_31.png" data-idx="31" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_32.png" data-idx="32" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_33.png" data-idx="33" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_34.png" data-idx="34" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_35.png" data-idx="35" alt=""></button></li>
+                                                                <li class="emotion-item"><button type="button" class="emotion-button"><img src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/user/qna/emoticon/emoticon_36.png" data-idx="36" alt=""></button></li>
+
+                                                            </ul>
+                                                            <button type="button" class="btn-layer-close qnaSpB"><span class="blind">닫기</span></button>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                            <button type="button" class="btnModifyCancel qnaSpB"><span class="blind">수정 취소</span></button>
+                                        </div>
+                                    </div>
+                                    <!-- // 내 답글 수정 영역 -->
+
+                                    <div class="commentSec" style="display: none;">
+                                        <div class="cmtArea">
+                                            <ul class="cmtList replyWrap">
+                                                <!-- [Dev] 내 댓글일 경우 contSec에 클래스 myCmt 추가, cellBx 버튼: 삭제만 노출 -->
+                                            </ul>
+                                            
+                                        </div>
+                                        <button type="button" class="btnCmtClose qnaSpA qnaBtnClose">댓글접기</button>
+                                    </div>
+                                </li>
+                            </ul>
+
+                                <!--?xml version="1.0" encoding="utf-16"?-->
+                            <div class="tplPagination newVer" role="navigation">
+                                <ul>
+                                    <li>
+                                    <span class="now">1</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bottom-btn-wrap">
+                        <a
+                            href="http://127.0.0.1:3000/templates/skill-log/dashboard.html"
+                            class="btn-all-question qnaSpB devBtnQstnList"
+                            data-backtoqstnlist="https://www.jobkorea.co.kr/User/Qstn/Index"
+                        >목록보기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 메인 컨테이너 끝 -->
+    </div>
+    <div id="footer" class="footer footer--medium">
+        <div class="footer__wrap">
+            <h2 class="skip">잡코리아 기타 정보</h2>
+
+            <div class="footer__advertisement">
+                <h3 class="blind">배너</h3>
+
+                <div class="footer__advertisement--text">
+                    <div class="ad-container">
+                        <a
+                            class="imgAdBnnr isSendImpLog"
+                            href="javascript:;"
+                            data-campaignid="802"
+                            data-campaignproductid="2991"
+                            data-space="recruitTextBottom"
+                            data-urlpath="/user/qstn/answerwrite"
+                            data-linkurl="https://www.jacademyhub.com/"
+                            data-linktype="NEW_WINDOW"
+                            data-gender=""
+                            data-age="0"
+                            data-pagetypecode="11"
+                            data-creativename="A"
+                            data-creativesrc="정림 아카데미 디지털 유닛\n2026년 제6기 교육생 모집"
+                        >
+                            <p>
+                                try-catch 아카데미디지털 유닛<br /><strong
+                                    >2026년 제6기 교육생 모집</strong
+                                >
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__advertisement--image">
+                    <script type="text/javascript">
+                        // AD 배너 이미지 오류
+                        function adBnnrImageOnError_10(pageTypeCode) {
+                            var divTag = ".divAdBnnr_" + pageTypeCode;
+                            $(divTag).css("display", "none");
+                        }
+                    </script>
+                    <div
+                        class="ad-container divAdBnnr_10"
+                        style="
+                            width: 495px;
+                            height: 110px;
+                            background-color: #ffffff;
+                        "
+                    >
+                        <a
+                            class="imgAdBnnr imgAdBnnr_10 isSendImpLog"
+                            href="javascript:;"
+                            data-campaignid="804"
+                            data-campaignproductid="3017"
+                            data-space="recruitBottom"
+                            data-urlpath="/user/qstn/answerwrite"
+                            data-linkurl="https://dongsung.career.greetinghr.com"
+                            data-linktype="NEW_WINDOW"
+                            data-gender=""
+                            data-age="0"
+                            data-pagetypecode="10"
+                            data-creativename="A"
+                            data-creativesrc="https://ads.jobkorea.co.kr/ads/pc/images/202512/160162b5-04ef-4693-b6cc-38513a5d6e32.png"
+                        >
+                            <img
+                                src="https://ads.jobkorea.co.kr/ads/pc/images/202512/160162b5-04ef-4693-b6cc-38513a5d6e32.png"
+                                alt=" try-catch 아카데미디지털 유닛 2026년 제6기 교육생 모집"
+                                onerror="adBnnrImageOnError_10(10)"
+                            />
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__advertisement--text">
+                    <div class="ad-container">
+                        <a
+                            class="imgAdBnnr isSendImpLog"
+                            href="javascript:;"
+                            data-campaignid="804"
+                            data-campaignproductid="3018"
+                            data-space="recruitTextBottom"
+                            data-urlpath="/user/qstn/answerwrite"
+                            data-linkurl="https://dongsung.career.greetinghr.com"
+                            data-linktype="NEW_WINDOW"
+                            data-gender=""
+                            data-age="0"
+                            data-pagetypecode="11"
+                            data-creativename="A"
+                            data-creativesrc=" 2026 쿠팡 개발자 IMPACT 신입체험자 모집"
+                        >
+                            <p>
+                                2026 쿠팡 개발자<br /><strong
+                                    >IMPACT 신입체험자 모집</strong
+                                >
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__notice">
+                <h3 class="blind">공지사항</h3>
+                <dl class="footer__notice-wrap clear">
+                    <dt class="footer__notice-title">
+                        <a href="https://www.jobkorea.co.kr/help/notice"
+                            >공지사항</a
+                        >
+                    </dt>
+                    <dd class="footer__notice-text">
+                        <a
+                            href="https://www.jobkorea.co.kr/help/notice/view?no=15019"
+                            ><div class="ellipsis">
+                                [무료] try-catchㅣAI로
+                                채용을 새롭게
+                            </div>
+                            <em class="tahoma">26.01.15</em></a
+                        >
+                    </dd>
+                </dl>
+            </div>
+
+            <div class="footer__service">
+                <h3 class="blind">잡코리아 서비스 링크</h3>
+                <ul>
+                    <li>
+                        <a
+                            href="http://company.jobkorea.co.kr/"
+                            target="_blank"
+                            >회사소개</a
+                        >
+                    </li>
+                    
+                    <li>
+                        <a
+                            href="https://www.jobkorea.co.kr/service_jk/provision/provision_gg.asp"
+                            target="_blank"
+                            >이용약관</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.jobkorea.co.kr/service_jk/privacy.asp"
+                            target="_blank"
+                            ><strong>개인정보처리방침</strong></a
+                        >
+                    </li>
+                    
+                    
+                    
+                    <li>
+                        <a
+                            href="https://www.jobkorea.co.kr/help/faq/user"
+                            target="_blank"
+                            >고객센터</a
+                        >
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__help">
+                <h3 class="blind">고객센터</h3>
+                <dl
+                    class="footer__help-wrap footer__help-wrap--working-hour"
+                >
+                    <dt class="footer__help-title">고객센터</dt>
+                    <dd class="footer__help-text">
+                        <span>1234-5678</span>
+                    </dd>
+                    <dd class="footer__help-text">
+                        (평일 <span>09:00 ~ 19:00</span> 토요일
+                        <span>09:00 ~ 15:00</span>)
+                    </dd>
+                </dl>
+                <dl class="footer__help-wrap footer__help-wrap--fax">
+                    <dt class="footer__help-title"><span>FAX</span></dt>
+                    <dd class="footer__help-text">
+                        <span>02-111-1111</span>
+                    </dd>
+                </dl>
+                <dl class="footer__help-wrap footer__help-wrap--email">
+                    <dt class="footer__help-title"><span>Email</span></dt>
+                    <dd class="footer__help-text">
+                        <a
+                            href="mailto:helpdesk@jobkorea.co.kr"
+                            class="footer__help-link"
+                            >test@.com</a
+                        >
+                    </dd>
+                </dl>
+                <dl class="footer__help-wrap footer__help-wrap--consult">
+                    <a
+                        href="https://talk.naver.com/ct/wcb8l5"
+                        target="_blank"
+                        title="새창"
+                        class="footer__help-link"
+                    >
+                        <span class="footer__help--icon"></span>
+                        <span class="footer__help--text">톡톡상담</span>
+                    </a>
+                </dl>
+
+                <ul class="footer__sns">
+                    <li class="footer__sns-item">
+                        <a
+                            href="https://blog.naver.com/jobkorea1"
+                            target="_blank"
+                            title="블로그"
+                            class="footer__sns-item--blog"
+                            ><span class="skip">블로그</span></a
+                        >
+                    </li>
+                    <li class="footer__sns-item">
+                        <a
+                            href="https://m.post.naver.com/my.nhn?memberNo=9028903"
+                            target="_blank"
+                            title="포스트"
+                            class="footer__sns-item--post"
+                            ><span class="skip">포스트</span></a
+                        >
+                    </li>
+                    <li class="footer__sns-item">
+                        <a
+                            href="https://www.facebook.com/jobkorea"
+                            target="_blank"
+                            title="페이스북"
+                            class="footer__sns-item--facebook"
+                            ><span class="skip">페이스북</span></a
+                        >
+                    </li>
+                    <li class="footer__sns-item">
+                        <a
+                            href="https://www.instagram.com/jobkorea_albamon/"
+                            target="_blank"
+                            title="인스타그램"
+                            class="footer__sns-item--instagram"
+                            ><span class="skip">인스타그램</span></a
+                        >
+                    </li>
+                    <li class="footer__sns-item">
+                        <a
+                            href="https://www.youtube.com/channel/UCOrdY3p46GJh_CYacfwYieg"
+                            target="_blank"
+                            title="유튜브"
+                            class="footer__sns-item--youtube"
+                            ><span class="skip">유튜브</span></a
+                        >
+                    </li>
+                </ul>
+            </div>
+
+            <p class="copyright">
+                ©
+                <strong
+                    ><a
+                        href="http://company.jobkorea.co.kr/"
+                        target="_blank"
+                        >TRY-CATCH</a
+                    ></strong
+                >
+                LLC. All rights reserved.
+            </p>
+        </div>
+    </div>
+</body>
+<script src="../../static/js/skill-log/log-detail.js"></script>
+<script src="../../static/js/community/header-event.js"></script>
+</html>
