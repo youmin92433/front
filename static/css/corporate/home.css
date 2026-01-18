@@ -615,3 +615,145 @@ address, caption, em {
     height: 10px;
     background: #e6e6e6;
 }
+
+/* 모달 - 서비스 Q&A */
+.common-modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 20000 !important;
+    width: 100%;
+    height: 100%;
+}
+.common-modal .modal-dimmed {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+}
+.common-modal.service-modal .modal-contents {
+    width: 800px;
+    height: 420px;
+}
+.common-modal .modal-contents {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    background: #fff;
+    padding: 30px 35px;
+}
+.common-modal .close-button {
+    position: absolute;
+    z-index: 10;
+    right: 35px;
+    top: 30px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url("/static/images/corporate/icon_close.png") no-repeat 50%;
+}
+.swiper-container {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    /* box-sizing: content-box; */
+}
+.service-modal .swiper-container .swiper-wrapper .swiper-slide {
+    width: 730px;
+}
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+}
+.common-modal h2 {
+    font-size: 20px;
+    letter-spacing: -.5px;
+    color: #1a1a1a;
+    line-height: 32px;
+}
+.common-modal.service-modal .contents {
+    margin-top: 24px;
+}
+.common-modal.service-modal .contents .text {
+    margin-top: 10px;
+    line-height: 20px;
+}
+.common-modal.service-modal .step-list {
+    padding: 14px 0 10px;
+}
+.common-modal.service-modal .step-list li:nth-child(n+2) {
+    margin-left: 24px;
+}
+.common-modal.service-modal .step-list li {
+    position: relative;
+    float: left;
+    height: 43px;
+    line-height: 41px;
+    padding: 0 17px;
+    border: 1px solid #ebebeb;
+    border-radius: 8px;
+    font-size: 12px;
+    letter-spacing: 0;
+    font-weight: 700;
+}
+.common-modal.service-modal .step-list li:nth-child(n+2):before {
+    position: absolute;
+    left: -15.5px;
+    top: 50%;
+    margin-top: -8.5px;
+    content: "";
+    width: 6px;
+    height: 17px;
+    background: url("https://i.jobkorea.kr/content/images/corporate/main_v2/arrow_6x17_black.png");
+}
+.common-modal.service-modal .swiper-button-next {
+    right: -77px;
+}
+.common-modal.service-modal .swiper-button-next, .common-modal.service-modal .swiper-button-prev {
+    width: 47px;
+    height: 125px;
+    background: url("/static/images/corporate/arrow_modal_swiper.png");
+    margin-top: -62.5px;
+}
+.swiper-button-next, .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    width: 27px;
+    height: 44px;
+    margin-top: -22px;
+    z-index: 10;
+    cursor: pointer;
+    background-size: 27px 44px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.common-modal.service-modal .swiper-button-prev {
+    left: -77px;
+    transform: scaleX(-1);
+}
+.common-modal.service-modal .swiper-button-next, .common-modal.service-modal .swiper-button-prev {
+    width: 47px;
+    height: 125px;
+    background: url("/static/images/corporate/arrow_modal_swiper.png");
+    margin-top: -62.5px;
+}
