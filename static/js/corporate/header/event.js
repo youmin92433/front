@@ -1,4 +1,4 @@
-// 요소 선택
+// 공통
 // sub-menu-modal
 const subMenuButton = document.querySelector(".button-all-menu");
 const subMenu = document.querySelector(".all-menu-modal");
@@ -6,6 +6,7 @@ const subMenu = document.querySelector(".all-menu-modal");
 // sub-nav
 const subNavLis = document.querySelectorAll(".left-menu-list li");
 
+// 기업 로그인 시
 // notification-menu
 const bell = document.querySelector(".bell");
 const notificationMenu = document.querySelector(".notification-menu");
@@ -13,10 +14,19 @@ const noNotification = document.querySelector(".no-notification");
 const notificationContainer = document.querySelector(
     ".list-notification-container",
 );
-
 const notificationCheck = true;
 
-// 이벤트 추가
+// top-menu-modal
+const topMenuModal = document.querySelector(".top-menu-modal");
+const corporateName = document.querySelector(".top-menu-modal-button");
+
+// server: 비로그인 시, 로그인 페이지로 이동
+function checkLogin() {
+    e.preventDefault();
+    location.href = "로그인" ? e.target.href : "로그인페이지 경로";
+}
+
+// 공통
 // sub-menu-modal
 subMenuButton.addEventListener("click", (e) => {
     subMenuButton.classList.toggle("active");
@@ -33,6 +43,7 @@ subNavLis.forEach((li) => {
     });
 });
 
+// 기업 로그인 시
 // notification-menu
 bell.addEventListener("click", (e) => {
     notificationMenu.classList.toggle("active");
@@ -43,4 +54,25 @@ bell.addEventListener("click", (e) => {
     (notificationCheck ? notificationContainer : noNotification).classList.add(
         "active",
     );
+});
+
+document.addEventListener("click", (e) => {
+    if (
+        !e.target.closest(".notification-menu") &&
+        !e.target.classList.contains("bell")
+    ) {
+        notificationMenu.classList.remove("active");
+    }
+
+    if (
+        !e.target.closest(".top-menu-modal") &&
+        !e.target.classList.contains("top-menu-modal-button")
+    ) {
+        topMenuModal.classList.remove("active");
+    }
+});
+
+// top-menu-modal
+corporateName.addEventListener("click", (e) => {
+    topMenuModal.classList.toggle("active");
 });
