@@ -1,13 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>header</title>
-        <link rel="stylesheet" href="/static/css/community/header.css" />
+        <title>my-log-list</title>
+        <link rel="stylesheet" href="../../static/css/community/header.css" />
+        <link rel="stylesheet" href="../../static/css/community/footer.css" />
+        <link
+            rel="stylesheet"
+            href="../../static/css/skill-log/my-log-list.css"
+        />
     </head>
-    <body>
-<div id="headerWrap" class="gnbTheme1200 devGnbContainer">
+    <body class="qnaWrapBody" style="">
+        <a name="top"></a>
+
+        <input type="hidden" name="MemId" id="MemId" value="egg3256" />
+        <input type="hidden" name="MemTypeCode" id="MemTypeCode" value="M" />
+
+        <!--// GNB 개편 시작 -->
+        <div id="headerWrap" class="gnbTheme1200 devGnbContainer">
             <div id="header" class="season_bg">
                 <!--신입공채 메뉴일경우 클래스 start-sub 추가 -->
                 <!-- // headInner -->
@@ -201,9 +212,7 @@
                                     id="gnbInternship"
                                     class="navItem internship"
                                 >
-                                    <a
-                                        href=""
-                                        class="linkItem"
+                                    <a href="" class="linkItem"
                                         ><span class="spNav"
                                             >기술 블로그</span
                                         ></a
@@ -211,10 +220,7 @@
                                 </li>
 
                                 <li id="futurelab" class="navItem futurelab">
-                                    <a
-                                        href=""
-                                        class="linkItem"
-                                    >
+                                    <a href="" class="linkItem">
                                         <span class="spNav"
                                             ><span class="txIr"
                                                 >커뮤니티</span
@@ -314,9 +320,7 @@
                                             href="javascript:void(0)"
                                             class="bell notify"
                                             id="js-bell"
-                                            onclick="
-                                                
-                                            "
+                                            onclick=""
                                         >
                                             알림
                                             <span id="js-alarmCnt" class="">
@@ -327,7 +331,6 @@
                                             class="popup-notification"
                                             id="js-notiLayer"
                                         >
-                                           
                                             <div
                                                 class="AItoast-popup AItoast-acceptance"
                                             >
@@ -406,7 +409,7 @@
                                                                 >
                                                                     북마크한
                                                                     <a
-                                                                        href="/User/Qstn/AnswerWrite?qstnNo=152527"
+                                                                        href=""
                                                                         target="_blank"
                                                                         onclick=""
                                                                     >
@@ -426,7 +429,7 @@
                                                                     class="buttons"
                                                                 >
                                                                     <a
-                                                                        href="/User/Qstn/AnswerWrite?qstnNo=152527"
+                                                                        href=""
                                                                         class="button"
                                                                         onclick=""
                                                                         >자세히보기</a
@@ -446,7 +449,7 @@
                                                 </div>
                                             </div>
                                             <a
-                                                href="/User/Alarm"
+                                                href=""
                                                 class="button button-footer button-all-view"
                                                 >모두보기</a
                                             >
@@ -614,23 +617,14 @@
                                                     <button
                                                         type="button"
                                                         class="AIbutton-common-agreement"
-                                                        onclick="
-                                                            OpenMissingOptionalPIMAgreeSet()
-                                                        "
+                                                        onclick=""
                                                     >
                                                         동의하고 알림받기
                                                     </button>
                                                     <button
                                                         type="button"
                                                         class="AIbutton-common-close"
-                                                        onclick="
-                                                            $(
-                                                                '.AImodal-popup',
-                                                            ).css(
-                                                                'display',
-                                                                'none',
-                                                            )
-                                                        "
+                                                        onclick=""
                                                     >
                                                         <i
                                                             class="system_system_close"
@@ -680,16 +674,10 @@
                                         <a
                                             href=""
                                             class="btnMyOpen txt-button ico-cp"
-                                            onclick="
-                                                GA_Event(
-                                                    '공통_PC',
-                                                    'gnb',
-                                                    '개인회원 홈',
-                                                )
-                                            "
+                                            onclick=""
                                             ><span class="spGnb"></span
                                             ><span class="user-name"
-                                                >김윤찬</span
+                                                >이준수</span
                                             ><span class="skip">열기</span></a
                                         >
                                         <div class="lyMyArea">
@@ -698,14 +686,8 @@
                                                     <ul>
                                                         <li>
                                                             <a
-                                                                href="https://www.jobkorea.co.kr/User/Mypage"
-                                                                onclick="
-                                                                    GA_Event(
-                                                                        '공통_PC',
-                                                                        'gnb',
-                                                                        '개인회원 홈',
-                                                                    )
-                                                                "
+                                                                href=""
+                                                                onclick=""
                                                                 ><span
                                                                     class="tx"
                                                                     >개인회원
@@ -715,14 +697,8 @@
                                                         </li>
                                                         <li>
                                                             <a
-                                                                href="https://www.jobkorea.co.kr/User/ResumeMng"
-                                                                onclick="
-                                                                    GA_Event(
-                                                                        '공통_PC',
-                                                                        'gnb',
-                                                                        '이력서 관리',
-                                                                    )
-                                                                "
+                                                                href=""
+                                                                onclick=""
                                                                 ><span
                                                                     class="tx"
                                                                     >자기소개서
@@ -732,14 +708,8 @@
                                                         </li>
                                                         <li>
                                                             <a
-                                                                href="https://www.jobkorea.co.kr/User/ApplyMng"
-                                                                onclick="
-                                                                    GA_Event(
-                                                                        '공통_PC',
-                                                                        'gnb',
-                                                                        '입사지원 현황',
-                                                                    )
-                                                                "
+                                                                href=""
+                                                                onclick=""
                                                                 ><span
                                                                     class="tx"
                                                                     >체험지원
@@ -749,14 +719,8 @@
                                                         </li>
                                                         <li>
                                                             <a
-                                                                href="https://www.jobkorea.co.kr/Text_User/User_Pwd.asp"
-                                                                onclick="
-                                                                    GA_Event(
-                                                                        '공통_PC',
-                                                                        'gnb',
-                                                                        '개인정보 수정',
-                                                                    )
-                                                                "
+                                                                href=""
+                                                                onclick=""
                                                                 ><span
                                                                     class="tx"
                                                                     >개인정보
@@ -769,15 +733,9 @@
                                                 <div class="lyRow">
                                                     <div class="btnRowWrap">
                                                         <a
-                                                            href="/Login/Logout.asp"
+                                                            href=""
                                                             class="btnLogOut"
-                                                            onclick="
-                                                                GA_Event(
-                                                                    '공통_PC',
-                                                                    'gnb',
-                                                                    '로그아웃',
-                                                                )
-                                                            "
+                                                            onclick=""
                                                             >로그아웃</a
                                                         >
                                                     </div>
@@ -820,15 +778,11 @@
                                                                 >직무별 공고</a
                                                             >
                                                         </li>
-                                                        
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div class="colItem">
-                                                
-                                                <div class="listBx">
-                                                    
-                                                </div>
+                                                <div class="listBx"></div>
                                             </div>
                                             <div class="colItem">
                                                 <strong class="titArea">
@@ -869,16 +823,10 @@
                                                 </div>
                                             </div>
                                             <div class="colItem">
-                                                
-                                                <div class="listBx">
-                                                   
-                                                </div>
+                                                <div class="listBx"></div>
                                             </div>
                                             <div class="colItem">
-                                                
-                                                <div class="listBx">
-                                                    
-                                                </div>
+                                                <div class="listBx"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -902,7 +850,6 @@
                                                                 >기업리뷰</a
                                                             >
                                                         </li>
-                                                       
                                                     </ul>
                                                 </div>
                                             </div>
@@ -919,27 +866,19 @@
                                                 >
                                                 <div class="listBx">
                                                     <ul class="list-col">
-                                                        
                                                         <li>
                                                             <a href=""
                                                                 >기술 블로그</a
                                                             >
                                                         </li>
-                                                       
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div class="colItem">
-                                                
-                                                <div class="listBx">
-                                                    
-                                                </div>
+                                                <div class="listBx"></div>
                                             </div>
                                             <div class="colItem">
-                                                
-                                                <div class="listBx">
-                                                    
-                                                </div>
+                                                <div class="listBx"></div>
                                             </div>
                                         </div>
                                         <div class="lyCol subCol">
@@ -952,9 +891,7 @@
                                                 <div class="listBx">
                                                     <ul>
                                                         <li>
-                                                            <a href=""
-                                                                >QnA</a
-                                                            >
+                                                            <a href="">QnA</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -985,7 +922,6 @@
                                                     ></i
                                                 ></a>
                                             </li>
-                                           
                                         </ul>
                                     </div>
                                 </div>
@@ -1062,6 +998,741 @@
         </div>
 
         <div class="jkNavDimm"></div>
+        <!-- GNB 개편 끝 //-->
+
+        <div id="wrap">
+            <!-- // sidebar 신규 추가영역  -->
+            <div class="side-navigation">
+                <h2 class="skip">취업톡톡 세부메뉴</h2>
+                <div class="navi-top-area has-tooltip">
+                    <a
+                        href="javascript:;"
+                        class="select-tooltip btn-question qnaSpB"
+                        >블로그 글쓰기</a
+                    >
+                    <!-- [Dev] 툴팁오픈 : tooltip-open 클래스 추가 -->
+                    <div class="create-menu">
+                        <ul class="create-menu-wrap tooltip-layer qnaSpB">
+                            <li>
+                                <a
+                                    href=""
+                                    class="create-menu-item qna qnaSpB devLoginLayer"
+                                    devalert="1"
+                                    data-wtypecode="1"
+                                    >블로그 작성하기</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href=""
+                                    class="create-menu-item carrier qnaSpB devLoginLayer"
+                                    devalert="1"
+                                    data-wtypecode="2"
+                                    >내 글 목록</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 로그인시 프로필 -->
+                    <div class="myInfoSec">
+                        <a href="" class="myInfo">
+                            <span class="proThumb"
+                                ><img
+                                    onerror="
+                                        this.src =
+                                            'https://cdn-assets.jobkorea.co.kr/images/jk-pc/m/ver_2/user/qna/profile_thumb/random_default.jpg'
+                                    "
+                                    src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/m/ver_2/user/qna/profile_thumb/random_5.jpg"
+                                    alt="프로필 이미지"
+                            /></span>
+
+                            <dl class="infoBx">
+                                <dt class="qnaSpA">
+                                    <span class="nickname">mento...</span>
+                                    <span class="lvIcon">Lv.1</span>
+                                </dt>
+                                <dd>
+                                    <span>글 <b>0</b></span>
+                                    <span>질문 <b>0</b></span>
+                                </dd>
+                            </dl>
+                        </a>
+                        <button
+                            type="button"
+                            class="myPoint devMainCouponButton"
+                        >
+                            <span class="point qnaSpB">0</span
+                            ><span class="btnCoupon qnaSpA">별 충전</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="navi-list-area">
+                    <!-- [Dev] 메뉴 on : 클래스 active 추가 -->
+                    <div class="sideNavLow">
+                        <strong class="sideNavTit"
+                            ><a href="">블로그 메뉴</a></strong
+                        >
+                        <ul class="sideNavList">
+                            <li class="sideNavListItem">
+                                <a
+                                    href=""
+                                    >블로그 홈</a
+                                >
+                            </li>
+                            <li class="sideNavListItem">
+                                <a href="">블로그 작성</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sideNavLow">
+                        <strong class="sideNavTit">실전공략</strong>
+                        <ul class="sideNavList">
+                            <li class="sideNavListItem">
+                                <a href="">자소서 꿀팁</a>
+                            </li>
+                            <li class="sideNavListItem">
+                                <a href="">회사 들여보기</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 사이드 네비게이션 끝 -->
+
+            <input type="hidden" id="devTab" name="devTab" value="5" />
+            <input
+                type="hidden"
+                id="devDiffCheck"
+                name="devDiffCheck"
+                value="0"
+            />
+            <input type="hidden" id="devTarget" name="devTarget" value="0" />
+
+            <div id="container">
+                <!-- 메인 : qnaMainWrap,  인기질문 : popularQuestion 추가 -->
+                <div id="content" class="qnaPopularWrap">
+                    <div class="top-title-wrap">
+                        <h2 class="title skip">
+                            <span class="skip">프로필 홈</span>
+                        </h2>
+                    </div>
+                    <!-- [Dev] 다른 회원 프로필일 경우 myInfoSec 에 클래스 other-member 추가 -->
+                    <div class="lyProfileHome">
+                        <div class="myInfoSec">
+                            <!-- [Dev] 프로필 랜덤 이미지 파일명 : random_1 ~ random_20, 이미지 없음 : random_default / 프로필 수정 페이지로 연결 -->
+                            <div class="profile-info">
+                                <a
+                                    href=""
+                                    class="proThumb qnaSpA"
+                                >
+                                    <img
+                                        onerror="
+                                            this.src =
+                                                'https://cdn-assets.jobkorea.co.kr/images/jk-pc/m/ver_2/user/qna/profile_thumb/random_default.jpg'
+                                        "
+                                        src="https://cdn-assets.jobkorea.co.kr/images/jk-pc/m/ver_2/user/qna/profile_thumb/random_6.jpg"
+                                        alt="프로필 이미지"
+                                    />
+                                </a>
+                                <dl class="infoBx">
+                                    <dt>
+                                        <span class="nickname"
+                                            >mentor0241539</span
+                                        >
+                                        <div class="has-tooltip">
+                                            <button
+                                                type="button"
+                                                class="select-tooltip"
+                                            >
+                                                <span class="lvIcon">Lv.1</span>
+
+                                                <span class="ico-tooltip qnaSpB"
+                                                    >?</span
+                                                >
+                                            </button>
+                                            <!-- 나의 멘토 레벨 레이어 -->
+                                            <div
+                                                class="level_modal_wrap tooltip-layer qnaSpB"
+                                            >
+                                                <div class="modal_content">
+                                                    <strong class="modal_title"
+                                                        >나의 멘토 레벨
+                                                        <span
+                                                            >Lv.1</span
+                                                        ></strong
+                                                    >
+                                                    <p class="text_next_level">
+                                                        답변 0
+                                                        <span
+                                                            >다음 레벨까지 3건의
+                                                            답변을
+                                                            작성하세요.</span
+                                                        >
+                                                    </p>
+
+                                                    <div class="level_bar">
+                                                        <div
+                                                            class="bar_item"
+                                                            style="width: 0%"
+                                                        ></div>
+                                                        <span class="tx_min"
+                                                            >0건</span
+                                                        >
+                                                        <span class="tx_max"
+                                                            >3건</span
+                                                        >
+                                                    </div>
+
+                                                    <div class="my_activity">
+                                                        <dl>
+                                                            <dt>질문수</dt>
+                                                            <dd>1</dd>
+                                                        </dl>
+                                                        <dl>
+                                                            <dt>답변수</dt>
+                                                            <dd>
+                                                                0
+                                                                <span
+                                                                    class="tooltip_wrap"
+                                                                    ><span
+                                                                        class="activity_tooltip"
+                                                                        >채택
+                                                                        0</span
+                                                                    ></span
+                                                                >
+                                                            </dd>
+                                                        </dl>
+                                                        <dl>
+                                                            <dt>댓글수</dt>
+                                                            <dd>2</dd>
+                                                        </dl>
+                                                    </div>
+                                                    <button
+                                                        type="button"
+                                                        class="btn-tooltip-close qnaSpB"
+                                                    >
+                                                        <span class="skip"
+                                                            >닫기</span
+                                                        >
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <!-- // 나의 멘토 레벨 레이어 -->
+                                        </div>
+                                    </dt>
+                                </dl>
+                                <a href="javascript:;" class="myPoint">
+                                    <span class="point qnaSpB">0</span
+                                    ><span
+                                        class="btnCoupon qnaSpA devMainCouponButton"
+                                        >별 충전</span
+                                    >
+                                </a>
+                            </div>
+                            <!--//profile-stats-dashboard-->
+                            <div class="profile-stats-dashboard">
+                                <div class="stat-card">
+                                    <i class="stat-icon-eye"></i>
+                                    <div class="stat-content">
+                                        <span class="stat-value">167</span>
+                                        <span class="stat-label">총 조회수</span>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <i class="stat-icon-like"></i>
+                                    <div class="stat-content">
+                                        <span class="stat-value">0</span>
+                                        <span class="stat-label">받은 좋아요</span>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <i class="stat-icon-log"></i>
+                                    <div class="stat-content">
+                                        <span class="stat-value">1</span>
+                                        <span class="stat-label">작성한 글</span>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <i class="stat-icon-chat"></i>
+                                    <div class="stat-content">
+                                        <span class="stat-value">2</span>
+                                        <span class="stat-label">받은 댓글</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--//profile-stats-dashboard-->
+                        </div>
+                        <!-- // myInfoSec -->
+
+                        <div class="lyListBoard">
+                            <div class="headerWrap">
+                                <h3 class="numBx">
+                                    <span>블로그 <span class="num">1</span>건</span>
+                                </h3>
+                                <div class="sort-box">
+                                    <div
+                                        class="select-box qnaSpB"
+                                        style="display: inline-block"
+                                    >
+                                        <select class="devSortList">
+                                            <option value="1" selected="">
+                                                최신순
+                                            </option>
+                                            <option value="2">인기순</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="listWrap 1">
+                                <ul>
+                                    <!-- 리스트 영역 -->
+                                    <li>
+                                        <div class="topArea">
+                                            <div
+                                                class="labelSwiper swiper-container swiper-container-horizontal"
+                                            >
+                                                <div
+                                                    class="labelBx swiper-wrapper"
+                                                >
+                                                    <!-- 링크 연결 : 클릭 시 그 태그 검색창으로 이동  -->
+                                                    <a
+                                                        href=""
+                                                        class="label swiper-slide swiper-slide-active"
+                                                        target="_blank"
+                                                        >#AI</a
+                                                    >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- [Dev] 방문한 링크 : visited 클래스 추가 -->
+                                        <div class="contArea">
+                                            <!-- [Dev] 이미지 포함 컨텐츠 : image 클래스 추가 -->
+                                            <a
+                                                href=""
+                                                class="post-type"
+                                            >
+                                                <div class="post-title">
+                                                    <span class="lineOne"
+                                                        >테스트</span
+                                                    >
+                                                </div>
+                                                <div class="post-summary">
+                                                    <span class="lineTwo"
+                                                        >테스트01
+                                                    </span>
+                                                </div>
+                                            </a>
+
+                                            <div class="post-cell-box">
+                                                <span class="cell"
+                                                    ><i
+                                                        class="qnaSpB icon-view-eye"
+                                                        >조회수</i
+                                                    >167</span
+                                                >
+                                                <button
+                                                    type="button"
+                                                    class="cell devQstnListLike"
+                                                    data-likecnt="0"
+                                                    data-qstnno="152856"
+                                                >
+                                                    <i class="qnaSpB icon-like"
+                                                        >좋아요</i
+                                                    >
+                                                    <em>0</em>
+                                                </button>
+                                                <!-- [Dev] 신규 답변의 경우 icnNew 클래스 추가 -->
+                                                <span class="cell">
+                                                    <i
+                                                        class="qnaSpB icon-answer-bubble"
+                                                        >답변</i
+                                                    ><span class="num">2</span>
+                                                </span>
+                                                <span class="cell"
+                                                    >21시간 전 작성</span
+                                                >
+                                            </div>
+                                            <!--//post-cell-box-->
+                                            <!-- [Dev] 북마크 툴팁 show - class tooltip-open 추가 -->
+                                            <div class="post-util has-tooltip">
+                                                <div class="post-util-item">
+                                                    <!-- [Dev] 북마크 - class on 추가/제거 -->
+                                                    <button
+                                                        type="button"
+                                                        class="devQnaDetailBookmark btnBookmark qnaSpB"
+                                                        data-qstn-no="152856"
+                                                    >
+                                                        북마크
+                                                    </button>
+                                                    <div
+                                                        class="book-mark-layer tooltip-layer qnaSpA"
+                                                    >
+                                                        <p class="txt">
+                                                            내 프로필 &gt;
+                                                            북마크 에
+                                                            추가되었습니다
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--//post-util has-tooltip-->
+                                        </div>
+                                        <!--//contArea-->
+                                    </li>
+                                    <!-- 리스트 영역 -->
+                                </ul>
+
+                                <!--?xml version="1.0" encoding="utf-16"?-->
+                                <div
+                                    class="tplPagination newVer"
+                                    role="navigation"
+                                >
+                                    <ul>
+                                        <li>
+                                            <span class="now">1</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // lyListBoard -->
+                    </div>
+                </div>
+                <!-- // content -->
+            </div>
+            <!-- // container -->
+        </div>
+
+        <!-- 포인트, 상품 레이어 -->
+
+        <div
+            class="mtuLyWrap lyMyPointWrap"
+            aria-hidden="true"
+            style="display: none"
+        >
+            <div class="dimmed" style="display: block"></div>
+            <div class="mtuPopup lyMyPoint">
+                <h1 class="lyHd">사용가능 포인트 <em id="devEmPoint"></em></h1>
+
+                <div class="info-area">
+                    <p class="info-item">
+                        보유 중인 포인트를 쿠폰으로 교환할 수 있습니다. (월 최대
+                        5만 포인트 교환 가능)
+                    </p>
+                    <p class="info-item">
+                        포인트 유효기간은 적립일로부터 1년입니다. (포인트 내역은
+                        최근 1년만 확인 가능)
+                    </p>
+                    <p class="info-item">
+                        포인트 유효기간 만료 시 자동 소멸됩니다.
+                    </p>
+                    <p class="info-item">
+                        잡코리아∙알바몬 통합탈퇴, 취업톡톡 이용정지 시 모든
+                        포인트가 자동 소멸됩니다.
+                    </p>
+                </div>
+                <div class="lyCnt devTplTabBx">
+                    <div class="tplTabBx qnaCmTab">
+                        <ul class="tplTab clear devInfoArea">
+                            <li class="devCouponTab on">
+                                <button type="button">
+                                    <span>별 충전</span>
+                                </button>
+                            </li>
+                            <li class="devPointTab">
+                                <button type="button">
+                                    <span>포인트 내역</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tplTabCnt">
+                        <div
+                            class="tabCnt myCoupon devCouponArea"
+                            style="display: block"
+                        >
+                            <div class="listWrap" style="display: none">
+                                <ul id="devCouponList" class="list"></ul>
+                            </div>
+                            <div class="noResultWrap devNoListWrap">
+                                <p class="qnaSpB noResultInfo">
+                                    상품을 불러올 수 없습니다.<br />
+                                    고객센터(1588-9350)에 문의해 주세요.
+                                    <span class="num">문제번호 : 4012</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button
+                    type="button"
+                    class="butClose mtuSpImg devLyBtnClose devPointLayerCloseBtn"
+                >
+                    <span class="blind">나의 포인트 레이어 닫기</span>
+                </button>
+            </div>
+        </div>
+
+        <input id="hdnPhone" type="hidden" name="hdnPhone" value="" />
+        <input id="hdnGoodsID" type="hidden" name="hdnGoodsID" value="" />
+        <div id="footer" class="footer footer--medium">
+            <div class="footer__wrap">
+                <h2 class="skip">잡코리아 기타 정보</h2>
+
+                <div class="footer__advertisement">
+                    <h3 class="blind">배너</h3>
+
+                    <div class="footer__advertisement--text">
+                        <div class="ad-container">
+                            <a
+                                class="imgAdBnnr isSendImpLog"
+                                href="javascript:;"
+                                data-campaignid="802"
+                                data-campaignproductid="2991"
+                                data-space="recruitTextBottom"
+                                data-urlpath="/user/qstn/answerwrite"
+                                data-linkurl="https://www.jacademyhub.com/"
+                                data-linktype="NEW_WINDOW"
+                                data-gender=""
+                                data-age="0"
+                                data-pagetypecode="11"
+                                data-creativename="A"
+                                data-creativesrc="정림 아카데미 디지털 유닛\n2026년 제6기 교육생 모집"
+                            >
+                                <p>
+                                    try-catch 아카데미디지털 유닛<br /><strong
+                                        >2026년 제6기 교육생 모집</strong
+                                    >
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__advertisement--image">
+                        <script type="text/javascript">
+                            // AD 배너 이미지 오류
+                            function adBnnrImageOnError_10(pageTypeCode) {
+                                var divTag = ".divAdBnnr_" + pageTypeCode;
+                                $(divTag).css("display", "none");
+                            }
+                        </script>
+                        <div
+                            class="ad-container divAdBnnr_10"
+                            style="
+                                width: 495px;
+                                height: 110px;
+                                background-color: #ffffff;
+                            "
+                        >
+                            <a
+                                class="imgAdBnnr imgAdBnnr_10 isSendImpLog"
+                                href="javascript:;"
+                                data-campaignid="804"
+                                data-campaignproductid="3017"
+                                data-space="recruitBottom"
+                                data-urlpath="/user/qstn/answerwrite"
+                                data-linkurl="https://dongsung.career.greetinghr.com"
+                                data-linktype="NEW_WINDOW"
+                                data-gender=""
+                                data-age="0"
+                                data-pagetypecode="10"
+                                data-creativename="A"
+                                data-creativesrc="https://ads.jobkorea.co.kr/ads/pc/images/202512/160162b5-04ef-4693-b6cc-38513a5d6e32.png"
+                            >
+                                <img
+                                    src="https://ads.jobkorea.co.kr/ads/pc/images/202512/160162b5-04ef-4693-b6cc-38513a5d6e32.png"
+                                    alt=" try-catch 아카데미디지털 유닛 2026년 제6기 교육생 모집"
+                                    onerror="adBnnrImageOnError_10(10)"
+                                />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__advertisement--text">
+                        <div class="ad-container">
+                            <a
+                                class="imgAdBnnr isSendImpLog"
+                                href="javascript:;"
+                                data-campaignid="804"
+                                data-campaignproductid="3018"
+                                data-space="recruitTextBottom"
+                                data-urlpath="/user/qstn/answerwrite"
+                                data-linkurl="https://dongsung.career.greetinghr.com"
+                                data-linktype="NEW_WINDOW"
+                                data-gender=""
+                                data-age="0"
+                                data-pagetypecode="11"
+                                data-creativename="A"
+                                data-creativesrc=" 2026 쿠팡 개발자 IMPACT 신입체험자 모집"
+                            >
+                                <p>
+                                    2026 쿠팡 개발자<br /><strong
+                                        >IMPACT 신입체험자 모집</strong
+                                    >
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__notice">
+                    <h3 class="blind">공지사항</h3>
+                    <dl class="footer__notice-wrap clear">
+                        <dt class="footer__notice-title">
+                            <a href=""
+                                >공지사항</a
+                            >
+                        </dt>
+                        <dd class="footer__notice-text">
+                            <a
+                                href=""
+                                ><div class="ellipsis">
+                                    [무료] try-catchㅣAI로 채용을 새롭게
+                                </div>
+                                <em class="tahoma">26.01.15</em></a
+                            >
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="footer__service">
+                    <h3 class="blind">잡코리아 서비스 링크</h3>
+                    <ul>
+                        <li>
+                            <a
+                                href=""
+                                target="_blank"
+                                >회사소개</a
+                            >
+                        </li>
+
+                        <li>
+                            <a
+                                href=""
+                                target="_blank"
+                                >이용약관</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href=""
+                                target="_blank"
+                                ><strong>개인정보처리방침</strong></a
+                            >
+                        </li>
+
+                        <li>
+                            <a
+                                href=""
+                                target="_blank"
+                                >고객센터</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__help">
+                    <h3 class="blind">고객센터</h3>
+                    <dl
+                        class="footer__help-wrap footer__help-wrap--working-hour"
+                    >
+                        <dt class="footer__help-title">고객센터</dt>
+                        <dd class="footer__help-text">
+                            <span>1234-5678</span>
+                        </dd>
+                        <dd class="footer__help-text">
+                            (평일 <span>09:00 ~ 19:00</span> 토요일
+                            <span>09:00 ~ 15:00</span>)
+                        </dd>
+                    </dl>
+                    <dl class="footer__help-wrap footer__help-wrap--fax">
+                        <dt class="footer__help-title"><span>FAX</span></dt>
+                        <dd class="footer__help-text">
+                            <span>02-111-1111</span>
+                        </dd>
+                    </dl>
+                    <dl class="footer__help-wrap footer__help-wrap--email">
+                        <dt class="footer__help-title"><span>Email</span></dt>
+                        <dd class="footer__help-text">
+                            <a
+                                href=""
+                                class="footer__help-link"
+                                >test@.com</a
+                            >
+                        </dd>
+                    </dl>
+                    <dl class="footer__help-wrap footer__help-wrap--consult">
+                        <a
+                            href=""
+                            target="_blank"
+                            title="새창"
+                            class="footer__help-link"
+                        >
+                            <span class="footer__help--icon"></span>
+                        </a>
+                    </dl>
+
+                    <ul class="footer__sns">
+                        <li class="footer__sns-item">
+                            <a
+                                href=""
+                                target="_blank"
+                                title="블로그"
+                                class="footer__sns-item--blog"
+                                ><span class="skip">블로그</span></a
+                            >
+                        </li>
+                        <li class="footer__sns-item">
+                            <a
+                                href=""
+                                target="_blank"
+                                title="포스트"
+                                class="footer__sns-item--post"
+                                ><span class="skip">포스트</span></a
+                            >
+                        </li>
+                        <li class="footer__sns-item">
+                            <a
+                                href=""
+                                target="_blank"
+                                title="페이스북"
+                                class="footer__sns-item--facebook"
+                                ><span class="skip">페이스북</span></a
+                            >
+                        </li>
+                        <li class="footer__sns-item">
+                            <a
+                                href=""
+                                target="_blank"
+                                title="인스타그램"
+                                class="footer__sns-item--instagram"
+                                ><span class="skip">인스타그램</span></a
+                            >
+                        </li>
+                        <li class="footer__sns-item">
+                            <a
+                                href=""
+                                target="_blank"
+                                title="유튜브"
+                                class="footer__sns-item--youtube"
+                                ><span class="skip">유튜브</span></a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <p class="copyright">
+                    ©
+                    <strong
+                        ><a
+                            href=""
+                            target="_blank"
+                            >TRY-CATCH</a
+                        ></strong
+                    >
+                    LLC. All rights reserved.
+                </p>
+            </div>
+        </div>
     </body>
-    <script src="/static/js/community/header-event.js"></script>
+    <script src="../../static/js/community/header-event.js"></script>
+    <script src="../../static/js/skill-log/my-log-list.js"></script>
 </html>
