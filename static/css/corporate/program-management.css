@@ -690,9 +690,9 @@ div.noticeBx ul li:before {
     font-weight: 400;
     line-height: 40px;
 }
-
-
-
+.scSelectWrap .selectInner .scSelectAppList .scSelectAppItem .manager .more-option li:nth-child(n+2) {
+    border-top: 1px solid #f5f5f5;
+}
 
 .scSelectWrap .selectInner .scSelectAppList .scSelectAppItem .program-detail-link {
     display: block;

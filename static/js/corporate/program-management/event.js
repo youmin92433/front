@@ -1,5 +1,21 @@
 NodeList.prototype.filter = Array.prototype.filter;
 
+// header
+const tabItems = document.querySelector(".tabItems");
+
+tabItems.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    if (e.target.tagName === "A") {
+        const [previousItem] = tabItems
+            .querySelectorAll("li")
+            .filter((li) => li.classList.contains("on"));
+
+        previousItem.classList.remove("on");
+        e.target.closest("li").classList.add("on");
+    }
+});
+
 // 최근 등록일순
 const sortButtons = document.querySelectorAll(".sort-button");
 
@@ -50,19 +66,28 @@ programList.forEach((li) => {
     });
 });
 
-// document.addEventListener("click", (e) => {
-//     programList.forEach((li) => {
-//         const moreOptionLayer = li.querySelector(".more-option");
+document.addEventListener("click", (e) => {
+    programList.forEach((li) => {
+        const moreOptionButton = li.querySelector(".moreOptionButton");
+        const moreOptionLayer = li.querySelector(".more-option");
 
-//         if (e.target === li.closest(".moreOptionButton")) {
-//             console.log(e.target);
-//             moreOptionLayer.classList.remove("active");
-//         }
-//     });
+        if (e.target.closest("li .moreOptionButton") !== moreOptionButton) {
+            moreOptionLayer.classList.remove("active");
+        }
+    });
+    sortButtons.forEach((button) => {
+        if (e.target !== button) {
+            button.nextElementSibling.classList.remove("active");
+        }
+    });
+});
 
-//     sortButtons.forEach((button) => {
-//         if (e.target !== button) {
-//             button.nextElementSibling.classList.remove("active");
-//         }
-//     });
-// });
+// 맨위로
+const toTheTop = document.getElementById("btnMtcTop");
+
+toTheTop.addEventListener("click", (e) => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
+});
