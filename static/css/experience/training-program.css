@@ -15105,11 +15105,6 @@ i.jds-icon, i.jds-icon:before {
     margin-top: var(--jds-space-space10);
 }
 
-.Button_size_48__1c0cohd4, .Button_size_52__1c0cohd5 {
-    padding: 0 var(--jds-space-space24);
-    border-radius: var(--jds-radius-radius8);
-}
-
 .Button_size_52__1c0cohd5 {
     min-height: 52px;
 }
@@ -15241,3 +15236,16 @@ i.jds-icon, i.jds-icon:before {
 .sharePopup {
     display: none;
 }
+
+._1ycqh5m4 {
+    margin-top: 20px;
+    margin-bottom: 4px;
+    height: 32px;
+}
+
+._1ycqh5m6 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
