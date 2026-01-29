@@ -141,8 +141,42 @@ document.addEventListener("click", () => {
     });
 });
 
-// 검색할때(서버)
-const searchButton = document.querySelector(".btn.btnSearch");
-searchButton.addEventListener("click", (e) => {
-    location.href = "";
+// ============================================
+// 5. 지원이력서 모달
+// ============================================
+const resumeButtons = document.querySelectorAll(
+    ".button.button-resume.resumeTile",
+);
+const resumeModalOverlay = document.getElementById("resumeModalOverlay");
+const resumeModalClose = document.getElementById("resumeModalClose");
+
+// 모든 지원이력서 버튼에 이벤트 등록
+resumeButtons.forEach((resumeButton) => {
+    resumeButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        resumeModalOverlay.classList.add("active");
+        document.body.style.overflow = "hidden"; // 스크롤 방지
+    });
+});
+
+// 닫기 버튼 클릭
+resumeModalClose.addEventListener("click", () => {
+    resumeModalOverlay.classList.remove("active");
+    document.body.style.overflow = ""; // 스크롤 복원
+});
+
+// 오버레이 클릭 시 닫기 (모달 외부 클릭)
+resumeModalOverlay.addEventListener("click", (e) => {
+    if (e.target === resumeModalOverlay) {
+        resumeModalOverlay.classList.remove("active");
+        document.body.style.overflow = "";
+    }
+});
+
+// ESC 키로 닫기
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && resumeModalOverlay.classList.contains("active")) {
+        resumeModalOverlay.classList.remove("active");
+        document.body.style.overflow = "";
+    }
 });
