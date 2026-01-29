@@ -15237,3 +15237,7 @@ i.jds-icon, i.jds-icon:before {
     background-color: black;
     box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, .08);
 }
+
+.sharePopup {
+    display: none;
+}

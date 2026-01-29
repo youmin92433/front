@@ -343,4 +343,9 @@ share.addEventListener("mouseleave", (e) => {
         tooltip.remove();
     }
 });
-share.addEventListener("click", (e) => {});
+
+const sharePopup = document.querySelector(".sharePopup");
+share.addEventListener("click", (e) => {
+    sharePopup.style.display =
+        sharePopup.style.display === "none" ? "block" : "none";
+});
