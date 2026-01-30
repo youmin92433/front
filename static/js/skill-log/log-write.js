@@ -228,18 +228,32 @@ textarea.addEventListener("click", (e) => {
 });
 
 // 태그 입력
+NodeList.prototype.filter = Array.prototype.filter;
 const addTag = document.querySelector("#devTags");
 const inputTag = document.querySelector(".tag-input");
 const regExp = /[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/;
 
 addTag.addEventListener("keyup", (e) => {
+    const tagDivs = document.querySelectorAll(".tagDiv");
     const tag = addTag.value;
+
     if (e.key === "Enter" && tag) {
         // span 태그 생성
         if (regExp.test(tag)) {
             alert("특수문자는 입력 못해요");
             addTag.value = "";
             return;
+        }
+        if (tagDivs.length > 0) {
+            if (
+                tagDivs.filter(
+                    (tagDiv) => tagDiv.textContent === "#" + addTag.value,
+                ).length
+            ) {
+                alert("중복된 태그가 있어요");
+                addTag.value = "";
+                return;
+            }
         }
         const span = document.createElement("span");
         span.className = "tagDiv";
