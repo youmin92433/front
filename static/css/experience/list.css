@@ -8763,7 +8763,13 @@ body.fixed #nav ul li:last-child:after {
   height: 200px;
   border: 1px solid #e5e6eb;
   background: #fff;
+  
 }
+
+.recruitList li .listCell:hover{
+  border: 1px solid #006e3f;
+}
+
 .recruitList li .listCell .listFoot {
   position: relative;
   height: auto;

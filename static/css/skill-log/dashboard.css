@@ -806,17 +806,6 @@ body.ctFixedMode {
     margin-bottom: -1px;
 }
 
-.pageTab .tabs li:last-child:after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: calc((100% / var(--tab-length-by-column)) * (var(--tab-length-by-column) * 2) + 1px);
-    bottom: 0;
-    height: 100%;
-    border-right: 1px solid #e8e8e8;
-}
-
 .pageTab .tabs.col03 li {
     width: calc((100% / 2) + 1px);
 }
