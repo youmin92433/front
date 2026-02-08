@@ -2025,9 +2025,9 @@ address, caption, em {
 #frmAddr .popAddr .popCont #postcode {
     width: 35%;
 }
-#frmAddr .popAddr .popCont #detailAddress, #frmAddr .popAddr .popCont #extraAddress   {
+/* #frmAddr .popAddr .popCont #detailAddress, #frmAddr .popAddr .popCont #extraAddress   {
     width: 41.8%;
-}
+} */
 #frmAddr .popAddr .popCont input[type=button] {
     width: 28%;
     border: 1px solid #006e3f;
