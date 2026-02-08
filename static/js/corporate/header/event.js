@@ -64,6 +64,11 @@ bell.addEventListener("click", (e) => {
     );
 });
 
+// top-menu-modal
+corporateName.addEventListener("click", (e) => {
+    topMenuModal.classList.toggle("active");
+});
+
 document.addEventListener("click", (e) => {
     if (
         !e.target.closest(".notification-menu") &&
@@ -79,11 +84,7 @@ document.addEventListener("click", (e) => {
         topMenuModal.classList.remove("active");
     }
 });
-
-// top-menu-modal
-corporateName.addEventListener("click", (e) => {
-    topMenuModal.classList.toggle("active");
-});
+//
 
 // 공지사항
 setInterval(() => {
